@@ -1,0 +1,74 @@
+/*Uso un grid para posicionar las distintas marcas de coches con tal de tener un diseño en rejilla*/
+#rejilla {
+    display: grid;
+    grid-template-columns: 240px 240px 240px;
+    grid-template-rows: 170px 170px 170px 170px 170px 170px;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Aplico un color de fondo a cada div que contenga cada marca de coche*/
+#rejilla div {
+    background-color: gray;
+}
+
+/*Hago que el enlace contenido en cada marca que nos redireccionará a la página de cada marca de coches se quede oculto para que luego con la animación, se active*/
+#rejilla div a {
+    visibility: hidden;
+    text-decoration: none;
+    color: white;
+}
+
+/*la animación consiste en girar la caja que contiene la marca y hacer aparecer en enlace aparte de aplicarle un color dorado al texto del enlace.A su vez he hecho que le salga unas sombras cuando tengamos el cursor encima del contenedor de cada marca*/
+#rejilla div:hover:not(.ancho-completo) {
+    transform: rotate(360deg) scale(1.5);
+    transition: 1s;
+    box-shadow: 0px 10px 30px black;
+}
+
+#rejilla div:hover:not(.ancho-completo) a {
+    transition: 2s;
+    visibility: visible;
+}
+
+#rejilla div:hover:not(.ancho-completo) a:hover {
+    color: gold;
+}
+
+/*he utlizado un flex para centrar el grid en el cuerpo*/
+main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/*he creado una clase para que por cada 6 marcas de coche haya un texto descriptivo , que indique a que continente pertenecen*/
+#rejilla .ancho-completo {
+    grid-column: 1 / -1;
+    font-size: xx-large;
+    background-color: black;
+    color: white;
+}
+
+/*le aplico el mismo tamaño a todos los logos de coches*/
+#rejilla img {
+    width: 150px;
+}
+
+/*uso un posicionamiento flex para centrar todo el contenido es decir , imagen y enlace , dentro de cada div de cada marca de coche*/
+#rejilla div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*aplico un fondo a todo el main del html de catálogo de marcas*/
+main {
+    background-image: url(../fondos/fondo.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

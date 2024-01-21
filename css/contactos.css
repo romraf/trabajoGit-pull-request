@@ -1,0 +1,65 @@
+/*aplico un fondo al main de los formularios al igual que lo posiciono en mitad de este con un posionamiento flex*/
+main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-image: url(../fondos/fondo_taller.jpeg);
+    background-size: cover;
+}
+
+/*doy formato a los label al igual que coloco todo en el centro del formulario con el posicionamiento flex al igual que le aplico unas sombras , un ancho y unos márgenes para no ir pegado a la cabecera y fondo*/
+label {
+    font-size: large;
+    margin: 5px;
+    margin-bottom: 7px;
+}
+
+form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #888888;
+    padding: 20px;
+    display: flex;
+    width: 500px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 30px black;
+}
+
+/*Separo los elementos de dentro del formulario con el uso de márgenes*/
+form *:not(button) {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/*aplico un alto y ancho a los inputs y select del formulario*/
+input,select {
+    width: 300px;
+    height: 30px;
+}
+
+/*centro el texto de las opciones*/
+select {
+    text-align: center;
+}
+
+/*cuando se ponga el cursor encima del textarea o input cambiará su fondo como color de letra y borde*/
+input:hover,textarea:hover {
+    background-color: darkgray;
+    border: 1px solid white;
+    color: white;
+}
+
+/*le doy formato al botón de enviar el cual cambiará de color cuando se ponga el cursor sobre él*/
+button {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+}

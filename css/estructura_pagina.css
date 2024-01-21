@@ -1,0 +1,97 @@
+/*sirve para acortar el logo y que no se sobrepongan los elementos del nav entre sí*/
+@media all and (max-width:700px) {
+    nav a {
+        width: 50px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+@media all and (max-width:900px) {
+    footer>a {
+        font-size: xx-small;
+    }
+}
+
+/*sirve para quitar el margin y padding predefinidos de los elementos de un html*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*configuramos el header aplicando un font-size a los enlaces dentro del header y un borde inferior para dar formato*/
+header {
+    font-size: x-large;
+    font-family: sans-serif;
+    border-bottom: 20px solid black;
+}
+
+/*mi nav bar será de color rojo, utilizo el posicionamiento flex para colocar los elementos de tal forma que el espacio esté repartido*/
+nav {
+    background-color: red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 180px;
+}
+
+/*le doy un determinado tamaño al logo de mi sitio web*/
+.logo {
+    height: 150px;
+    margin-top: 25px;
+}
+
+/*le doy formato a mi footer al igual que vuelvo a usar el display flex para colocar los elementos dentro de este en una sola fila*/
+footer {
+    height: 175px;
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+/*uso el display para que cada elemento de mi main se estire y ocupe todo el ancho de la página*/
+#pagina_completa {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+}
+
+/*Le doy un tamaño grande tanto a la sección de términos y condiciones como al apartado de copyright*/
+footer span,
+footer a {
+    font-family: sans-serif;
+    font-size: x-large;
+}
+
+/*Le aplico un color de letra al enlace de mi footer al igual que le aplico una subrayado a este cuando tengo el cursor encima */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Le doy un determinado tamaño a los logos de las redes sociales */
+.rrss {
+    height: 40px;
+    margin: 10px;
+}
+
+/*aplico un color y un subrayado de color negro en el header de tal forma que cuando tenga el cursor encima, estos se cambien a blanco*/
+header a {
+    color: black;
+    text-decoration: underline black;
+}
+
+header a:hover {
+    color: white;
+    text-decoration: underline white;
+}
