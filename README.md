@@ -1,5 +1,6 @@
 # Aplicación concesionario de coches
 **Marcas utilizadas**
+
 Marcas Europeas como:
 > Mini
 > Jaguar
@@ -7,6 +8,7 @@ Marcas Europeas como:
 > Volkswagen
 > Land Rover
 > Fiat
+
 Marcas Asiáticas como:
 1. Acura
 2. Subaru
